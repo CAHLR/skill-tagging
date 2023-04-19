@@ -9,6 +9,14 @@ import models
 
 
 class ClassificationModelTrainer:
+    """A model trainer for classification model.
+
+    Key arguments:
+    embeddings -- pandas.DataFrame, the embeddings of the source contents
+    labels -- pandas.DataFrame, the labels of the source contents, should have two columns "source" and "target"
+    all_labels -- a list of all target labels
+    """
+
     def __init__(
         self,
         embeddings,
@@ -112,11 +120,20 @@ class ClassificationModelTrainer:
 
 
 class SimilarityMatchingModelTrainer:
+    """A model trainer for similarity matching model.
+
+    Key arguments:
+    source_embeddings -- pandas.DataFrame, the embeddings of the source contents
+    target_embeddings -- pandas.DataFrame, the embeddings of the target labels
+    labels -- pandas.DataFrame, the labels of the source contents, should have two columns "source" and "target"
+    all_labels -- a list of all target labels
+    """
+
     def __init__(self, source_embeddings, target_embeddings, labels, all_labels):
         self.all_labels = all_labels
         self.labels = labels
         self.source_embeddings = source_embeddings
-        self.target_embeddings = target_embeddings.iloc[self.all_labels]
+        self.target_embeddings = target_embeddings.loc[self.all_labels]
         self.dim = max(source_embeddings.shape[1], target_embeddings.shape[1])
 
         self._process_data()
@@ -141,8 +158,8 @@ class SimilarityMatchingModelTrainer:
                 ),
                 index=self.source_embeddings.index,
             )
-        self.X = self.source_embeddings.loc[labels["source"]].values
-        self.y = self.target_embeddings.loc[labels["target"]].values
+        self.X = self.source_embeddings.loc[self.labels["source"]].values
+        self.y = self.target_embeddings.loc[self.labels["target"]].values
 
     def train(self):
         u, _, vt = np.linalg.svd(self.y.T.dot(self.X))
