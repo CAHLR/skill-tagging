@@ -1,6 +1,9 @@
-# Meeting the Challenge of Aligning Open Educational Resources to Taxonomies
+# Aligning open educational resources to new taxonomies: How AI technologies can help and in which scenarios
 ![model](https://user-images.githubusercontent.com/39921289/227646739-aa7baa2a-6a18-4e0b-a4f9-3ab7399819d7.png)
 
+This repo contains the code for the paper:
+
+Zhi Li, Zachary A Pardos, and Cheng Ren. 2024. [Aligning Open Educational Resources to New Taxonomies: How AI technologies can help and in which scenarios](https://doi.org/10.1016/j.compedu.2024.105027). Computers & Education (2024).
 
 ## Dependencies
 The code is written and run with the following packages:
