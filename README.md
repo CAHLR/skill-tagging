@@ -3,7 +3,7 @@
 
 This repo contains the code for the paper:
 
-Zhi Li, Zachary A Pardos, and Cheng Ren. 2024. [Aligning Open Educational Resources to New Taxonomies: How AI technologies can help and in which scenarios](https://doi.org/10.1016/j.compedu.2024.105027). Computers & Education (2024).
+Zhi Li, Zachary A Pardos, and Cheng Ren. (In press). [Aligning Open Educational Resources to New Taxonomies: How AI technologies can help and in which scenarios](https://doi.org/10.1016/j.compedu.2024.105027). Computers & Education.
 
 ## Dependencies
 The code is written and run with the following packages:
