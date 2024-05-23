@@ -67,10 +67,10 @@ The code is written and run with the following packages:
 
 `data/examples` contains example files for fine-tuning LLMs for demonstration purposes.
 
-- gpt_finetuning_train.jsonl: training file for fine-tuning GPT
-- gpt_finetuning_val.jsonl: validation file for fine-tuning GPT
-- llama_finetuning_train.csv: training file for fine-tuning Llama2
-- llama_finetuning_val.csv: validation file for fine-tuning Llama2
+- `gpt_finetuning_train.jsonl`: training file for fine-tuning GPT
+- `gpt_finetuning_val.jsonl`: validation file for fine-tuning GPT
+- `llama_finetuning_train.csv`: training file for fine-tuning Llama2
+- `llama_finetuning_val.csv`: validation file for fine-tuning Llama2
 
 ## Instructions
 
