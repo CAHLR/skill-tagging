@@ -76,12 +76,12 @@ The code is written and run with the following packages:
 
 `llm-GPT.ipynb` and `llm-Llama2.ipynb` contain code implementing two performance improvement strategies discussed in the paper - Fine-tuning (Section 4.3.2) and Standards in the prompt (Section 4.3.3)
 
-### 1. Fine-tuning
+### Fine-tuning
 
 - GPT: Prepare the training and validation JSONL files following the format of `data/examples/gpt_finetuning_train.jsonl` and `data/examples/gpt_finetuning_val.jsonl`, and upload the files. Next, create a fine-tuned model. Once your job is completed, use the model for inference.
 - Llama2: To minimize VRAM usage during the fine-tuning process, we used the 4-bit precision technique with parameter-efficient fine-tuning (PEFT) - QLoRA. Prepare the training and validation CSV files following the format of `data/examples/llama_finetuning_train.jsonl` and `data/examples/llama_finetuning_val.jsonl`, and load the files. Start the fine-tuning process, and once your job is finished, store your model.
 
-### 2. Standards in the prompt
+### Standards in the prompt
 
 Import a CSV file containing the problems that you intend to tag with skills, and include a list of standards into the prompt.
 
